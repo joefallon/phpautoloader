@@ -1,0 +1,21 @@
+{
+    "name":        "joefallon/phpautoloader",
+    "description": "Simple to use and versatile PHP autoloader.",
+    "keywords":    [ "PHP", "autoloader", "KISS", "easy-to-use", "PSR-0" ],
+    "homepage":    "https://github.com/joefallon/phpautoloader",
+    "license":     "MIT",
+    "authors": [
+        {
+            "name":     "Joe Fallon",
+            "email":    "joseph.t.fallon@gmail.com",
+            "homepage": "http://blog.joefallon.net/",
+            "role":     "Lead Developer"
+        }
+    ],
+    "autoload": {
+        "psr-0":
+        {
+            "JoeFallon": "src/"
+        } 
+    }
+}
