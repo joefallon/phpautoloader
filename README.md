@@ -17,7 +17,7 @@ Joe's Autoloader includes the following features:
   that are not namespaced at all.
 * Searches for classes within the include path efficiently for quick loading.
 
-## Installtion
+## Installation
 
 The easiest way to install Joe's Autoloader is with
 [Composer](https://getcomposer.org/). Create the following `composer.json` file
@@ -66,5 +66,3 @@ For example, let's assume we want to load the class `Bar` that is within the fil
 named `Bar.php` contained within a folder `Foo`. Also, let's assume that the class
 `Bar` is namespaced `\Foo\Bar`. This gives a path of `LIB_PATH/Foo/Bar.php`. When
 `new Bar();` is exectuded, the `Bar` class will be loaded (if is isn't already).
-
-
