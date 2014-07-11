@@ -1,6 +1,12 @@
 # Joe's PHP Autoloader
 
-Joe's PHP Autoloader is a versatile and easy to use autoloader for PHP 5.3.
+Joe's PHP Autoloader is a versatile and easy to use autoloader for PHP 5.3 and greater.
+It provides the following features:
+
+*   All of the include paths are searched automatically, one by one.
+*   Non-namespaced classes are supported.
+*   Normal PSR-0 namespaced classes are supported.
+*   Underscore namespaced (e.g. like the Zend Framework 1 or PEAR) classes are supported.
 
 ## Requirements
 
@@ -65,4 +71,4 @@ defined above, then autoloader will have no problems finding and loading classes
 For example, let's assume we want to load the class `Bar` that is within the file
 named `Bar.php` contained within a folder `Foo`. Also, let's assume that the class
 `Bar` is namespaced `\Foo\Bar`. This gives a path of `LIB_PATH/Foo/Bar.php`. When
-`new Bar();` is exectuded, the `Bar` class will be loaded (if is isn't already).
+`new Bar();` is executed, the `Bar` class will be loaded (if is isn't already).
