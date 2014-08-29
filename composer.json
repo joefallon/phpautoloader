@@ -1,8 +1,8 @@
 {
-    "name":        "joefallon/phpautoloader",
+    "name":        "joefallon/PhpAutoloader",
     "description": "Joe's simple to use and versatile PHP autoloader.",
     "keywords":    [ "PHP", "autoloader", "KISS", "easy-to-use", "PSR-0" ],
-    "homepage":    "https://github.com/joefallon/phpautoloader",
+    "homepage":    "https://github.com/joefallon/PhpAutoloader",
     "license":     "MIT",
     "authors": [
         {
