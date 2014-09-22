@@ -17,7 +17,7 @@ class Autoloader
 
 
     /**
-     * registerAutoLoad - Call this method to start the autoloader.
+     * Call this method to start the autoloader.
      */
     public static function registerAutoLoad()
     {
@@ -27,8 +27,6 @@ class Autoloader
 
 
     /**
-     * load
-     *
      * @param string $className
      * @return bool
      */
@@ -59,8 +57,6 @@ class Autoloader
 
 
     /**
-     * searchForNonNamespacedClass
-     *
      * @return bool
      */
     protected function searchForNonNamespacedClass()
@@ -84,8 +80,6 @@ class Autoloader
 
 
     /**
-     * searchForUnderscoreNamespacedClass
-     *
      * @return boolean
      */
     protected function searchForUnderscoreNamespacedClass()
@@ -109,8 +103,6 @@ class Autoloader
 
 
     /**
-     * searchForBackslashNamespacedClass
-     *
      * @return boolean
      */
     protected function searchForBackslashNamespacedClass()

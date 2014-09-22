@@ -3,16 +3,17 @@
 Joe's PHP Autoloader is a versatile and easy to use autoloader for PHP 5.3 and greater.
 It provides the following features:
 
-*   All of the include paths are searched automatically, one by one.
-*   Non-namespaced classes are supported.
+*   When autoloading a file, all of the include paths are searched automatically.
+*   For maximum legacy supprt, non-namespaced classes are allowed.
 *   Normal PSR-0 namespaced classes are supported.
 *   Underscore namespaced (e.g. like the Zend Framework 1 or PEAR) classes are supported.
+*   The autoload is fast. No recursive directory searches are performed.
 
 ## Requirements
 
 The only requirement is PHP > 5.3.0 due to the use of
 [namespaces](http://www.php.net/manual/en/language.namespaces.rationale.php).
-Additionally, [Composer](https://getcomposer.org/) can be helpful as well.
+Additionally, [Composer](https://getcomposer.org/) can be helpful.
  
 ## Features
 
@@ -21,7 +22,7 @@ Joe's Autoloader includes the following features:
 * Will load (i.e. require) classes that are namespaced with normal backslash PHP
   namespaces, underscore (e.g. Zend Framework 1, PEAR) namespaces, and classes
   that are not namespaced at all.
-* Searches for classes within the include path efficiently for quick loading.
+* Only the include paths are searched for quick loading.
 
 ## Installation
 
@@ -43,7 +44,7 @@ To use Joe's Autoloader, the following initialization steps are needed:
 
 * Add the base directories where classes can be found to the include path.
 * Call the `Autoloader::registerAutoload()` method to load the autoloader.
-* Start using classes with your code.
+* Start using classes in your code.
 
 ```php
 <?php
@@ -51,22 +52,23 @@ To use Joe's Autoloader, the following initialization steps are needed:
 use JoeFallon\Autoloader;
 
 // Define the include paths.
-define('BASE_PATH', realpath(dirname(__FILE__).'/../'));
-define('LIB_PATH',  BASE_PATH.'/lib');
-define('VEND_PATH', BASE_PATH.'/vendor');
+define('BASE_PATH', realpath(dirname(__FILE__) . '/../'));
+define('LIB_PATH',  BASE_PATH . '/lib');
+define('VEND_PATH', BASE_PATH . '/vendor');
 
 // Set the application include paths for autoloading.
-set_include_path(get_include_path().':'.LIB_PATH.':'.BASE_PATH);
+set_include_path(get_include_path() . ':' . LIB_PATH . ':' . BASE_PATH);
 
 // Require the Composer autoloader.
-require(VEND_PATH.'/autoload.php');
+require(VEND_PATH . '/autoload.php');
 
 // Initialize Joe's Autoloader.
 Autoloader::registerAutoLoad();
 ```
 
 As long as namespaces are mapped to the folder structure within the directories
-defined above, then autoloader will have no problems finding and loading classes.
+defined above, then autoloader will have no problems finding and loading the
+classes.
 
 For example, let's assume we want to load the class `Bar` that is within the file
 named `Bar.php` contained within a folder `Foo`. Also, let's assume that the class
