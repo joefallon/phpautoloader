@@ -47,8 +47,6 @@ To use Joe's Autoloader, the following initialization steps are needed:
 * Start using classes in your code.
 
 ```php
-<?php
-
 use JoeFallon\Autoloader;
 
 // Define the include paths.
