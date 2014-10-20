@@ -8,7 +8,7 @@
  */
 namespace JoeFallon;
 
-class Autoloader
+class AutoLoader
 {
     /** @var string */
     private $_classFilename;
