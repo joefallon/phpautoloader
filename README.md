@@ -68,4 +68,4 @@ named `Bar.php` contained within a folder `Foo`. Also, let's assume that the cla
 
 Here is a visual depiction of the above example:
 
-!(http://i.imgur.com/7GjiNg2.png)
+![Joe's Autoloader Example](http://i.imgur.com/7GjiNg2.png)
