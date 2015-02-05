@@ -1,4 +1,6 @@
-# Joe's PHP Autoloader
+# phpautoloader
+
+By [Joe Fallon](http://blog.joefallon.net)
 
 Joe's PHP Autoloader is a versatile and easy to use autoloader for PHP 5.3 and greater.
 It provides the following features:
