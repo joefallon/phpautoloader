@@ -5,7 +5,7 @@ By [Joe Fallon](http://blog.joefallon.net)
 Joe's PHP Autoloader is a versatile and easy to use autoloader for PHP 5.3 and greater.
 It provides the following features:
 
-*   When autoloading a class, all of the include paths are searched automatically.
+*   When auto-loading a class, all of the include paths are searched automatically.
 *   For maximum legacy support, non-namespaced classes are allowed.
 *   Normal PSR-0 namespaced classes are supported.
 *   Underscore namespaced (e.g. like the Zend Framework 1 or PEAR) classes are supported.
@@ -40,22 +40,22 @@ To use Joe's Autoloader, the following initialization steps are needed:
 * Start using classes in your code.
 
 ```php
-use JoeFallon\Autoloader;
+use JoeFallon\AutoLoader;
 
 // Define the include paths.
 define('BASE_PATH', realpath(dirname(__FILE__) . '/../'));
 define('LIB_PATH',  BASE_PATH . '/lib');
 define('VEND_PATH', BASE_PATH . '/vendor');
 
-// Set the application include paths for autoloading.
+// Set the application include paths for auto-loading.
 set_include_path(get_include_path() . ':' . LIB_PATH . ':' . BASE_PATH);
 
-// Require the Composer autoloader. Composer will handle its own class autoloading
+// Require the Composer autoloader. Composer will handle its own class auto-loading
 // using its own autoloader.
 require(VEND_PATH . '/autoload.php');
 
-// Initialize Joe's Autoloader. Joe's Autoloader will handle autoloading any classes
-// that are not autoloaded using Composer's built-in autoloader.
+// Initialize Joe's Autoloader. Joe's Autoloader will handle auto-loading any classes
+// that are not auto-loaded using Composer's built-in autoloader.
 Autoloader::registerAutoLoad();
 ```
 
@@ -65,8 +65,8 @@ classes.
 
 For example, let's assume we want to load the class `Bar` that is within the file
 named `Bar.php` contained within a folder `Foo`. Also, let's assume that the class
-`Bar` is namespaced `\Foo\Bar`. This would give a file path of `LIB_PATH/Foo/Bar.php`. When
-`new Bar();` is executed, the `Bar` class will be loaded (if is wasn't already).
+`Bar` is namespaced `\Foo\Bar`. This would give a file path of `LIB_PATH/Foo/Bar.php`. 
+When `new Bar();` is executed, the `Bar` class will be loaded (if is wasn't already).
 
 Here is a visual depiction of the above example:
 
