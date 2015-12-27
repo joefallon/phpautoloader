@@ -6,7 +6,7 @@ Joe's PHP Autoloader is a versatile and easy to use autoloader for PHP 5.3 and g
 It provides the following features:
 
 *   When autoloading a class, all of the include paths are searched automatically.
-*   For maximum legacy supprt, non-namespaced classes are allowed.
+*   For maximum legacy support, non-namespaced classes are allowed.
 *   Normal PSR-0 namespaced classes are supported.
 *   Underscore namespaced (e.g. like the Zend Framework 1 or PEAR) classes are supported.
 *   This autoloader is fast. No recursive directory searches are performed. 
