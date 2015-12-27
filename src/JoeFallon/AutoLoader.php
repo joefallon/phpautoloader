@@ -1,11 +1,6 @@
 <?php
 namespace JoeFallon;
 
-/**
- * @author    Joseph Fallon <joseph.t.fallon@gmail.com>
- * @copyright Copyright 2015 Joseph Fallon (All rights reserved)
- * @license   MIT
- */
 class AutoLoader
 {
     /** @var string */
