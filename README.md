@@ -66,7 +66,7 @@ classes.
 For example, let's assume we want to load the class `Bar` that is within the file
 named `Bar.php` contained within a folder `Foo`. Also, let's assume that the class
 `Bar` is namespaced `\Foo\Bar`. This would give a file path of `LIB_PATH/Foo/Bar.php`. 
-When `new Bar();` is executed, the `Bar` class will be loaded (if is wasn't already).
+When `new Bar();` is executed, the `Bar` class will be loaded (if is was not already).
 
 Here is a visual depiction of the above example:
 
